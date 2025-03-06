@@ -45,16 +45,16 @@ Para descriptografar, basta inverter o deslocamento.
 
 ### **Criptografando um texto**
 ```
-Digite o texto para criptografar: hello world
-Digite a chave (1 a 26): 3
-Texto criptografado: khoor zruog
+Enter your message for encrypt: hello world
+Enter your key: 3
+Message: khoor zruog
 ```
 
 ### **Descriptografando o texto**
 ```
-Digite o texto para descriptografar: khoor zruog
-Digite a chave (1 a 26): 3
-Texto descriptografado: hello world
+Enter your message for decrypt: khoor zruog
+Enter your key: 3
+Message: hello world
 ```
 
 ## 📌 Estrutura do projeto
@@ -63,7 +63,9 @@ Texto descriptografado: hello world
 cifra-de-cesar/
 │── src/
 │   ├── services/
-│   │   ├── encrypt.py
+│   │   ├── __init__.py
+│   │   ├── decrypt.py
+│   │   ├── display_menu.py
 │   │   ├── decrypt.py
 │── main.py
 │── README.md
@@ -71,6 +73,8 @@ cifra-de-cesar/
 
 - **`encrypt.py`**: Contém a função de criptografia.
 - **`decrypt.py`**: Contém a função de descriptografia.
+- **`display_menu.py`**: Contém a função que exibe o menu de opções.
+- **`__init__.py`**: Indica que a pasta `services` é um pacote Python.
 - **`main.py`**: Gerencia o menu e a interação com o usuário.
 - **`README.md`**: Documentação do projeto.
 
