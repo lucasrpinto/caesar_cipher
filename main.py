@@ -1,6 +1,10 @@
 from src.services.encrypt import encrypt
 from src.services.decrypt import decrypt
 from src.services.display_menu import list_options
+import unicodedata
+
+def remove_codes(text):
+  return ''.join(c for c in unicodedata.normalize('NFKD', text) if not unicodedata.combining(c))
 
 first_run = True
 
@@ -13,6 +17,7 @@ while True:
   
   if choice == "1":
     text = input("Enter your message for encrypt: ").lower()
+    text = remove_codes(text)
     key = int(input("Enter your key: "))
     print("Message: ", encrypt(text, key))
 
